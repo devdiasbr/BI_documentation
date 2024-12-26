@@ -44,6 +44,7 @@ Este projeto é uma versão aprimorada do [Power BI Documentation](https://githu
    - Escolha um modelo Word para a documentação
    - Selecione o diretório de saída
    - Clique em "Gerar Documentação"
+   - O arquivo será salvo em uma pasta "output" com o nome "[nome_do_arquivo]_documentado.docx"
 
 ## 📄 Documentação Gerada
 

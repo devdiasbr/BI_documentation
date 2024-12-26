@@ -366,7 +366,13 @@ def main(arquivo_pbit: str, modelo_word: str, diretorio_saida: str) -> Optional[
         nome_BI = Path(arquivo_pbit).stem
         caminho_BI = str(Path(arquivo_pbit).parent)
         arquivo_zip = os.path.join(caminho_BI, f'{nome_BI}.zip')
-        salvar_path = os.path.join(diretorio_saida, f'{nome_BI}_doc.docx')
+        
+        # Criar diretório output se não existir
+        output_dir = os.path.join(diretorio_saida, 'output')
+        os.makedirs(output_dir, exist_ok=True)
+        
+        # Novo caminho do arquivo de saída
+        salvar_path = os.path.join(output_dir, f'{nome_BI}_documentado.docx')
         
         logger.info(f"Processando relatório: {nome_BI}")
         
