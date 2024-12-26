@@ -106,6 +106,21 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 
 Desenvolvido por [Bruno Dias](https://github.com/devdiasbr)
 
+## Executável
+
+Um arquivo executável (.exe) foi criado para facilitar o uso do programa. Você pode encontrá-lo em:
+`/dist/main.exe`
+
+Para usar o programa:
+1. Navegue até a pasta `dist`
+2. Clique duas vezes em `main.exe`
+3. O programa abrirá uma janela com a interface de documentação
+
+Observações:
+- O executável é independente e pode ser executado em qualquer computador Windows sem necessidade do Python instalado
+- Você pode mover o arquivo `main.exe` para qualquer lugar do seu computador
+- Se houver alterações no código Python, será necessário gerar o executável novamente usando PyInstaller
+
 ---
 
 **Nota**: Para sugestões, bugs ou contribuições, por favor abra uma issue no GitHub.
