@@ -32,7 +32,10 @@ class MainWindow:
         """Inicializa os controles da interface"""
         self.arquivo_pbit = ft.Text()
         self.modelo_word = ft.Text()
-        self.pick_pbit_dialog = ft.FilePicker(on_result=self.pick_pbit_file)
+        self.pick_pbit_dialog = ft.FilePicker(
+            on_result=self.pick_pbit_file
+        )
+        self.pick_pbit_dialog.allowed_extensions = ["pbit", "pbix"]
         self.pick_word_dialog = ft.FilePicker(on_result=self.pick_word_template)
         
         self.page.overlay.extend([
@@ -76,6 +79,11 @@ class MainWindow:
                 ft.Text(
                     "Gere documentação automatizada para seus relatórios Power BI",
                     size=16
+                ),
+                ft.Text(
+                    "Você pode usar arquivos .pbix ou .pbit - arquivos .pbix serão convertidos automaticamente",
+                    size=14,
+                    color=ft.colors.SECONDARY
                 )
             ]),
             margin=ft.margin.only(bottom=20)
@@ -86,10 +94,9 @@ class MainWindow:
             ft.Container(
                 content=ft.Column([
                     ft.Text("Como Usar:", size=16, weight=ft.FontWeight.BOLD),
-                    ft.Text("1. Transforme seu arquivo .pbix em .pbit"),
-                    ft.Text("2. Selecione o arquivo .pbit gerado"),
-                    ft.Text("3. Selecione um modelo Word"),
-                    ft.Text("4. Clique em 'Gerar Documentação'"),
+                    ft.Text("1. Selecione um arquivo .pbix ou .pbit"),
+                    ft.Text("2. Selecione um modelo Word (opcional)"),
+                    ft.Text("3. Clique em 'Gerar Documentação'"),
                 ]),
                 padding=10,
                 col={"sm": 12, "md": 6},
@@ -115,7 +122,7 @@ class MainWindow:
             ft.Container(
                 content=ft.Column([
                     ft.FilledButton(
-                        "Selecionar arquivo .pbit",
+                        "Selecionar arquivo PBIT/PBIX",
                         icon=ft.icons.FILE_UPLOAD,
                         on_click=lambda _: self.pick_pbit_dialog.pick_files(),
                     ),
@@ -176,10 +183,27 @@ class MainWindow:
             if e.files:
                 file_path = e.files[0].path
                 if file_path.lower().endswith('.pbix'):
-                    with self.page.show_loading("Convertendo PBIX para PBIT..."):
-                        pbit_path = convert_pbix_to_pbit(file_path)
-                        file_path = pbit_path
-                        self.page.show_snack_bar("Arquivo convertido com sucesso!")
+                    # Mostra barra de progresso
+                    progress = ft.ProgressBar(width=400)
+                    self.page.add(progress)
+                    self.page.update()
+                    
+                    # Converte o arquivo
+                    pbit_path = convert_pbix_to_pbit(file_path)
+                    file_path = pbit_path
+                    
+                    # Remove a barra de progresso
+                    self.page.remove(progress)
+                    self.page.update()
+                    
+                    # Mostra mensagem de sucesso
+                    self.page.show_snack_bar(
+                        ft.SnackBar(
+                            content=ft.Text("Arquivo convertido com sucesso!"),
+                            action="OK"
+                        )
+                    )
+                
                 self.arquivo_pbit.value = file_path
                 self.arquivo_pbit.update()
         except Exception as ex:
@@ -198,20 +222,33 @@ class MainWindow:
 
     def generate_documentation(self, e):
         """Gera a documentação usando os parâmetros selecionados"""
-        if not all([self.arquivo_pbit.value, self.modelo_word.value]):
+        if not self.arquivo_pbit.value:
             self.page.show_snack_bar(
                 ft.SnackBar(
-                    content=ft.Text("Por favor, selecione o arquivo PBIT e o modelo Word"),
+                    content=ft.Text("Por favor, selecione o arquivo PBIT/PBIX"),
                     action="OK"
                 )
             )
             return
 
         try:
-            DocumentGenerator.generate(
+            # Mostra barra de progresso
+            progress = ft.ProgressBar(width=400)
+            self.page.add(progress)
+            self.page.update()
+
+            # Gera a documentação
+            generator = DocumentGenerator()
+            output_file = generator.generate(
                 self.arquivo_pbit.value,
-                self.modelo_word.value
+                self.modelo_word.value if self.modelo_word.value else None
             )
+
+            # Remove a barra de progresso
+            self.page.remove(progress)
+            self.page.update()
+
+            # Mostra mensagem de sucesso
             self.page.show_snack_bar(
                 ft.SnackBar(
                     content=ft.Text("Documentação gerada com sucesso! Verifique a pasta 'output'"),
