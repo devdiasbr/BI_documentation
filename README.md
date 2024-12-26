@@ -2,11 +2,11 @@
 
 Uma ferramenta com interface gráfica moderna para gerar documentação automatizada de relatórios Power BI.
 
-## Descrição
+## 📋 Descrição
 
 O Power BI Documentator é uma aplicação desktop que automatiza a criação de documentação técnica para relatórios Power BI. Com uma interface intuitiva e responsiva, o programa extrai informações detalhadas do seu relatório e gera um documento Word organizado e profissional.
 
-## Funcionalidades
+## ✨ Funcionalidades
 
 - Interface gráfica moderna e responsiva
 - Tema claro/escuro
@@ -19,8 +19,10 @@ O Power BI Documentator é uma aplicação desktop que automatiza a criação de
 - Feedback visual em tempo real
 - Tratamento de erros robusto
 - Logging detalhado
+- Geração automática de nomes de arquivo
+- Organização automática dos arquivos de saída
 
-## Estrutura do Projeto
+## 🏗️ Estrutura do Projeto
 
 ```
 BI_documentation/
@@ -28,7 +30,8 @@ BI_documentation/
 ├── Report/              # Arquivos do Power BI
 ├── src/                 # Código fonte
 │   ├── core/           # Lógica principal
-│   │   └── document_generator.py
+│   │   ├── document_generator.py
+│   │   └── smartdoc_sem_ia.py
 │   ├── ui/             # Interface do usuário
 │   │   ├── components/ # Componentes da UI
 │   │   │   └── main_window.py
@@ -40,7 +43,7 @@ BI_documentation/
 └── requirements.txt   # Dependências
 ```
 
-## Como Usar
+## 🚀 Como Usar
 
 1. **Pré-requisitos**
    - Python 3.8 ou superior
@@ -69,10 +72,10 @@ BI_documentation/
 5. **Na Interface**
    - Selecione o arquivo .pbit
    - Escolha um modelo Word
-   - Selecione o diretório de saída
    - Clique em "Gerar Documentação"
+   - O documento será gerado automaticamente na pasta `output/`
 
-## Tecnologias
+## 🛠️ Tecnologias
 
 - **Python 3.8+**: Linguagem principal
 - **Flet**: Framework para interface gráfica
@@ -80,14 +83,14 @@ BI_documentation/
 - **pathlib**: Manipulação de caminhos
 - **logging**: Sistema de logs
 
-## Personalização
+## 📝 Personalização
 
 O projeto suporta personalização através de:
-- Modelos Word customizados
+- Modelos Word customizados em `templates/`
 - Configurações em `src/utils/config.py`
 - Temas claro/escuro
 
-## Contribuindo
+## 🤝 Contribuindo
 
 1. Fork o projeto
 2. Crie sua Feature Branch (`git checkout -b feature/AmazingFeature`)
@@ -95,11 +98,11 @@ O projeto suporta personalização através de:
 4. Push para a Branch (`git push origin feature/AmazingFeature`)
 5. Abra um Pull Request
 
-## Licença
+## 📄 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-## Créditos
+## 🙏 Créditos
 
 Desenvolvido por [Bruno Dias](https://github.com/devdiasbr)
 
