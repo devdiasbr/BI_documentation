@@ -1,86 +1,108 @@
-# Power BI Documentation Generator
+# Power BI Documentator
 
-Uma ferramenta com interface gráfica para gerar documentação técnica automatizada de relatórios Power BI.
+Uma ferramenta com interface gráfica moderna para gerar documentação automatizada de relatórios Power BI.
 
-Este projeto é uma versão aprimorada do [Power BI Documentation](https://github.com/data-ju/Power_BI_Documentation) originalmente criado por [Julia Cantarelli](https://github.com/data-ju). 
+## Descrição
 
-## ✨ Novos Recursos
+O Power BI Documentator é uma aplicação desktop que automatiza a criação de documentação técnica para relatórios Power BI. Com uma interface intuitiva e responsiva, o programa extrai informações detalhadas do seu relatório e gera um documento Word organizado e profissional.
 
-- Interface gráfica amigável usando Flet
-- Seleção de arquivos via interface
+## Funcionalidades
+
+- Interface gráfica moderna e responsiva
 - Tema claro/escuro
-- Instruções passo a passo integradas
-- Feedback visual do progresso
-- Melhor tratamento de erros e logging
+- Extração automática de:
+  - Páginas do relatório
+  - Tabelas e colunas
+  - Medidas DAX
+  - Fontes de dados
+  - Relacionamentos
+- Feedback visual em tempo real
+- Tratamento de erros robusto
+- Logging detalhado
 
-## 🚀 Como Usar
+## Estrutura do Projeto
 
-1. **Pré-requisitos:**
-   - Python 3.x instalado
+```
+BI_documentation/
+├── output/               # Documentos gerados
+├── Report/              # Arquivos do Power BI
+├── src/                 # Código fonte
+│   ├── core/           # Lógica principal
+│   │   └── document_generator.py
+│   ├── ui/             # Interface do usuário
+│   │   ├── components/ # Componentes da UI
+│   │   │   └── main_window.py
+│   │   └── app.py
+│   └── utils/          # Utilitários
+│       └── config.py
+├── templates/          # Modelos de documento
+├── main.py            # Ponto de entrada
+└── requirements.txt   # Dependências
+```
+
+## Como Usar
+
+1. **Pré-requisitos**
+   - Python 3.8 ou superior
    - Power BI Desktop
 
-2. **Instalação:**
+2. **Instalação**
    ```bash
    # Clone o repositório
-   git clone https://github.com/devdiasbr/BI_documentation.git
+   git clone https://github.com/seu-usuario/BI_documentation.git
    cd BI_documentation
 
    # Instale as dependências
    pip install -r requirements.txt
    ```
 
-3. **Preparação do Arquivo Power BI:**
-   - Abra seu arquivo .pbix no Power BI Desktop
+3. **Preparação do Arquivo**
+   - Abra seu relatório no Power BI Desktop
    - Vá em Arquivo > Exportar > Modelo do Power BI
    - Salve o arquivo .pbit
 
-4. **Execução:**
+4. **Execução**
    ```bash
-   python app.py
+   python main.py
    ```
 
-5. **Na Interface:**
-   - Selecione o arquivo .pbit gerado
-   - Escolha um modelo Word para a documentação
+5. **Na Interface**
+   - Selecione o arquivo .pbit
+   - Escolha um modelo Word
    - Selecione o diretório de saída
    - Clique em "Gerar Documentação"
-   - O arquivo será salvo em uma pasta "output" com o nome "[nome_do_arquivo]_documentado.docx"
 
-## 📄 Documentação Gerada
+## Tecnologias
 
-O documento final incluirá:
-- Páginas do relatório
-- Tabelas e colunas
-- Medidas DAX
-- Fontes de dados
-- Relacionamentos entre tabelas
+- **Python 3.8+**: Linguagem principal
+- **Flet**: Framework para interface gráfica
+- **python-docx**: Geração de documentos Word
+- **pathlib**: Manipulação de caminhos
+- **logging**: Sistema de logs
 
-## 🛠️ Tecnologias Utilizadas
+## Personalização
 
-- Python
-- Flet (Interface Gráfica)
-- python-docx (Geração de documentos)
-- pandas (Manipulação de dados)
+O projeto suporta personalização através de:
+- Modelos Word customizados
+- Configurações em `src/utils/config.py`
+- Temas claro/escuro
 
-## 📝 Modelo Word
+## Contribuindo
 
-- Um modelo Word padrão é fornecido no repositório
-- Você pode usar seu próprio modelo, mantendo os marcadores necessários
+1. Fork o projeto
+2. Crie sua Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
+4. Push para a Branch (`git push origin feature/AmazingFeature`)
+5. Abra um Pull Request
 
-## 🤝 Contribuições
-
-Contribuições são bem-vindas! Sinta-se à vontade para:
-- Reportar bugs
-- Sugerir novas funcionalidades
-- Enviar pull requests
-
-## ⭐ Créditos
-
-Este projeto é baseado no trabalho original de [Julia Cantarelli (data-ju)](https://github.com/data-ju/Power_BI_Documentation), que desenvolveu a versão inicial do script de documentação. Nossa versão adiciona uma interface gráfica e melhorias na usabilidade, mantendo a essência do projeto original.
-
-## 📄 Licença
+## Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
+## Créditos
+
+Desenvolvido por [Bruno Dias](https://github.com/devdiasbr)
+
 ---
-Desenvolvido com ❤️ por [Bruno Dias](https://github.com/devdiasbr) | Baseado no trabalho de [Julia Cantarelli](https://github.com/data-ju)
+
+**Nota**: Para sugestões, bugs ou contribuições, por favor abra uma issue no GitHub.
