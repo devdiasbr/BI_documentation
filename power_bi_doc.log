@@ -1,0 +1,88 @@
+2024-12-26 11:55:04,127 - flet - INFO - Assets path configured: C:\Users\bruno\OneDrive\햞ea de Trabalho\BI_documentator\assets
+2024-12-26 11:55:04,132 - flet - INFO - Starting up TCP server on localhost:56581
+2024-12-26 11:55:04,140 - flet - INFO - Flet app has started...
+2024-12-26 11:55:09,806 - flet - INFO - App URL: tcp://localhost:56581
+2024-12-26 11:55:09,807 - flet_desktop - INFO - Starting Flet View app...
+2024-12-26 11:55:09,808 - flet_desktop - INFO - Looking for Flet executable at: C:\Users\bruno\AppData\Local\Programs\Python\Python313\Lib\site-packages\flet_desktop\app\flet\flet.exe
+2024-12-26 11:55:09,809 - flet_desktop - INFO - Flet View found in: C:\Users\bruno\AppData\Local\Programs\Python\Python313\Lib\site-packages\flet_desktop\app\flet\flet.exe
+2024-12-26 11:55:14,145 - flet - INFO - App session started
+2024-12-26 11:57:53,968 - flet - INFO - Assets path configured: C:\Users\bruno\OneDrive\햞ea de Trabalho\BI_documentator\assets
+2024-12-26 11:57:53,972 - flet - INFO - Starting up TCP server on localhost:57086
+2024-12-26 11:57:53,981 - flet - INFO - Flet app has started...
+2024-12-26 11:57:53,993 - flet - INFO - App URL: tcp://localhost:57086
+2024-12-26 11:57:53,994 - flet_desktop - INFO - Starting Flet View app...
+2024-12-26 11:57:53,997 - flet_desktop - INFO - Looking for Flet executable at: C:\Users\bruno\AppData\Local\Programs\Python\Python313\Lib\site-packages\flet_desktop\app\flet\flet.exe
+2024-12-26 11:57:53,997 - flet_desktop - INFO - Flet View found in: C:\Users\bruno\AppData\Local\Programs\Python\Python313\Lib\site-packages\flet_desktop\app\flet\flet.exe
+2024-12-26 11:57:54,446 - flet - INFO - App session started
+2024-12-26 11:58:06,621 - flet - INFO - Assets path configured: C:\Users\bruno\OneDrive\햞ea de Trabalho\BI_documentator\assets
+2024-12-26 11:58:06,625 - flet - INFO - Starting up TCP server on localhost:57106
+2024-12-26 11:58:06,632 - flet - INFO - Flet app has started...
+2024-12-26 11:58:06,640 - flet - INFO - App URL: tcp://localhost:57106
+2024-12-26 11:58:06,640 - flet_desktop - INFO - Starting Flet View app...
+2024-12-26 11:58:06,642 - flet_desktop - INFO - Looking for Flet executable at: C:\Users\bruno\AppData\Local\Programs\Python\Python313\Lib\site-packages\flet_desktop\app\flet\flet.exe
+2024-12-26 11:58:06,643 - flet_desktop - INFO - Flet View found in: C:\Users\bruno\AppData\Local\Programs\Python\Python313\Lib\site-packages\flet_desktop\app\flet\flet.exe
+2024-12-26 11:58:07,117 - flet - INFO - App session started
+2024-12-26 11:59:07,802 - flet - INFO - Assets path configured: C:\Users\bruno\OneDrive\햞ea de Trabalho\BI_documentator\assets
+2024-12-26 11:59:07,805 - flet - INFO - Starting up TCP server on localhost:57196
+2024-12-26 11:59:07,812 - flet - INFO - Flet app has started...
+2024-12-26 11:59:07,821 - flet - INFO - App URL: tcp://localhost:57196
+2024-12-26 11:59:07,821 - flet_desktop - INFO - Starting Flet View app...
+2024-12-26 11:59:07,823 - flet_desktop - INFO - Looking for Flet executable at: C:\Users\bruno\AppData\Local\Programs\Python\Python313\Lib\site-packages\flet_desktop\app\flet\flet.exe
+2024-12-26 11:59:07,824 - flet_desktop - INFO - Flet View found in: C:\Users\bruno\AppData\Local\Programs\Python\Python313\Lib\site-packages\flet_desktop\app\flet\flet.exe
+2024-12-26 11:59:08,183 - flet - INFO - App session started
+2024-12-26 11:59:14,760 - flet - INFO - Assets path configured: C:\Users\bruno\OneDrive\햞ea de Trabalho\BI_documentator\assets
+2024-12-26 11:59:14,764 - flet - INFO - Starting up TCP server on localhost:57209
+2024-12-26 11:59:14,773 - flet - INFO - Flet app has started...
+2024-12-26 11:59:14,779 - flet - INFO - App URL: tcp://localhost:57209
+2024-12-26 11:59:14,780 - flet_desktop - INFO - Starting Flet View app...
+2024-12-26 11:59:14,781 - flet_desktop - INFO - Looking for Flet executable at: C:\Users\bruno\AppData\Local\Programs\Python\Python313\Lib\site-packages\flet_desktop\app\flet\flet.exe
+2024-12-26 11:59:14,782 - flet_desktop - INFO - Flet View found in: C:\Users\bruno\AppData\Local\Programs\Python\Python313\Lib\site-packages\flet_desktop\app\flet\flet.exe
+2024-12-26 11:59:15,195 - flet - INFO - App session started
+2024-12-26 12:00:55,582 - flet - INFO - Assets path configured: C:\Users\bruno\OneDrive\햞ea de Trabalho\BI_documentator\assets
+2024-12-26 12:00:55,586 - flet - INFO - Starting up TCP server on localhost:57362
+2024-12-26 12:00:55,593 - flet - INFO - Flet app has started...
+2024-12-26 12:00:55,599 - flet - INFO - App URL: tcp://localhost:57362
+2024-12-26 12:00:55,599 - flet_desktop - INFO - Starting Flet View app...
+2024-12-26 12:00:55,601 - flet_desktop - INFO - Looking for Flet executable at: C:\Users\bruno\AppData\Local\Programs\Python\Python313\Lib\site-packages\flet_desktop\app\flet\flet.exe
+2024-12-26 12:00:55,601 - flet_desktop - INFO - Flet View found in: C:\Users\bruno\AppData\Local\Programs\Python\Python313\Lib\site-packages\flet_desktop\app\flet\flet.exe
+2024-12-26 12:00:55,999 - flet - INFO - App session started
+2024-12-26 12:02:25,947 - flet - INFO - Assets path configured: C:\Users\bruno\OneDrive\햞ea de Trabalho\BI_documentator\assets
+2024-12-26 12:02:25,951 - flet - INFO - Starting up TCP server on localhost:57520
+2024-12-26 12:02:25,959 - flet - INFO - Flet app has started...
+2024-12-26 12:02:25,968 - flet - INFO - App URL: tcp://localhost:57520
+2024-12-26 12:02:25,969 - flet_desktop - INFO - Starting Flet View app...
+2024-12-26 12:02:25,970 - flet_desktop - INFO - Looking for Flet executable at: C:\Users\bruno\AppData\Local\Programs\Python\Python313\Lib\site-packages\flet_desktop\app\flet\flet.exe
+2024-12-26 12:02:25,970 - flet_desktop - INFO - Flet View found in: C:\Users\bruno\AppData\Local\Programs\Python\Python313\Lib\site-packages\flet_desktop\app\flet\flet.exe
+2024-12-26 12:02:26,353 - flet - INFO - App session started
+2024-12-26 13:42:40,799 - flet - INFO - Assets path configured: C:\Users\bruno\OneDrive\햞ea de Trabalho\BI_documentator\assets
+2024-12-26 13:42:40,803 - flet - INFO - Starting up TCP server on localhost:64592
+2024-12-26 13:42:40,813 - flet - INFO - Flet app has started...
+2024-12-26 13:42:40,820 - flet - INFO - App URL: tcp://localhost:64592
+2024-12-26 13:42:40,821 - flet_desktop - INFO - Starting Flet View app...
+2024-12-26 13:42:40,825 - flet_desktop - INFO - Looking for Flet executable at: C:\Users\bruno\AppData\Local\Programs\Python\Python313\Lib\site-packages\flet_desktop\app\flet\flet.exe
+2024-12-26 13:42:40,826 - flet_desktop - INFO - Flet View found in: C:\Users\bruno\AppData\Local\Programs\Python\Python313\Lib\site-packages\flet_desktop\app\flet\flet.exe
+2024-12-26 13:42:41,211 - flet - INFO - App session started
+2024-12-26 13:43:13,240 - flet - INFO - Assets path configured: C:\Users\bruno\OneDrive\햞ea de Trabalho\BI_documentator\assets
+2024-12-26 13:43:13,243 - flet - INFO - Starting up TCP server on localhost:64670
+2024-12-26 13:43:13,250 - flet - INFO - Flet app has started...
+2024-12-26 13:43:13,256 - flet - INFO - App URL: tcp://localhost:64670
+2024-12-26 13:43:13,256 - flet_desktop - INFO - Starting Flet View app...
+2024-12-26 13:43:13,260 - flet_desktop - INFO - Looking for Flet executable at: C:\Users\bruno\AppData\Local\Programs\Python\Python313\Lib\site-packages\flet_desktop\app\flet\flet.exe
+2024-12-26 13:43:13,261 - flet_desktop - INFO - Flet View found in: C:\Users\bruno\AppData\Local\Programs\Python\Python313\Lib\site-packages\flet_desktop\app\flet\flet.exe
+2024-12-26 13:43:13,639 - flet - INFO - App session started
+2024-12-26 13:46:11,848 - flet - INFO - Assets path configured: C:\Users\bruno\OneDrive\햞ea de Trabalho\BI_documentator\assets
+2024-12-26 13:46:11,852 - flet - INFO - Starting up TCP server on localhost:65008
+2024-12-26 13:46:11,860 - flet - INFO - Flet app has started...
+2024-12-26 13:46:11,871 - flet - INFO - App URL: tcp://localhost:65008
+2024-12-26 13:46:11,871 - flet_desktop - INFO - Starting Flet View app...
+2024-12-26 13:46:11,874 - flet_desktop - INFO - Looking for Flet executable at: C:\Users\bruno\AppData\Local\Programs\Python\Python313\Lib\site-packages\flet_desktop\app\flet\flet.exe
+2024-12-26 13:46:11,875 - flet_desktop - INFO - Flet View found in: C:\Users\bruno\AppData\Local\Programs\Python\Python313\Lib\site-packages\flet_desktop\app\flet\flet.exe
+2024-12-26 13:46:12,295 - flet - INFO - App session started
+2024-12-26 13:47:10,728 - flet - INFO - Assets path configured: C:\Users\bruno\OneDrive\햞ea de Trabalho\BI_documentator\assets
+2024-12-26 13:47:10,741 - flet - INFO - Starting up TCP server on localhost:65203
+2024-12-26 13:47:10,750 - flet - INFO - Flet app has started...
+2024-12-26 13:47:10,757 - flet - INFO - App URL: tcp://localhost:65203
+2024-12-26 13:47:10,758 - flet_desktop - INFO - Starting Flet View app...
+2024-12-26 13:47:10,761 - flet_desktop - INFO - Looking for Flet executable at: C:\Users\bruno\AppData\Local\Programs\Python\Python313\Lib\site-packages\flet_desktop\app\flet\flet.exe
+2024-12-26 13:47:10,762 - flet_desktop - INFO - Flet View found in: C:\Users\bruno\AppData\Local\Programs\Python\Python313\Lib\site-packages\flet_desktop\app\flet\flet.exe
+2024-12-26 13:47:11,157 - flet - INFO - App session started
