@@ -127,6 +127,12 @@ Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para ma
 - GitHub: [@devdiasbr](https://github.com/devdiasbr)
 - LinkedIn: [Bruno Dias](https://www.linkedin.com/in/bruno-dias-b195611a7/)
 
+## 🙏 Agradecimentos
+
+Agradecimento especial à [Data-Ju](https://www.youtube.com/@Data-Ju) por compartilhar conhecimento e inspirar este projeto. Este projeto é baseado no tutorial dela disponível em:
+- Tutorial YouTube: [Como criar documentação automática para Power BI](https://www.youtube.com/watch?v=QnvdPVVeGpA)
+- Projeto Original: [Power_BI_Documentation](https://github.com/data-ju/Power_BI_Documentation)
+
 ---
 
 **Nota**: Para sugestões, bugs ou contribuições, por favor abra uma [issue](https://github.com/devdiasbr/BI_documentation/issues) no GitHub.
