@@ -1,6 +1,6 @@
 import logging
 from pathlib import Path
-from smartdoc_sem_ia import main as generate_doc
+from .smartdoc_sem_ia import main as generate_doc
 from src.utils.config import OUTPUT_DIR
 
 logger = logging.getLogger(__name__)
