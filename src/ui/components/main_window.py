@@ -1,6 +1,7 @@
 import flet as ft
 from pathlib import Path
 from src.core.document_generator import DocumentGenerator
+from src.core.pbix_converter import convert_pbix_to_pbit
 from src.utils.config import (
     APP_NAME,
     WINDOW_WIDTH,
@@ -171,9 +172,23 @@ class MainWindow:
 
     def pick_pbit_file(self, e: ft.FilePickerResultEvent):
         """Manipula a seleção do arquivo PBIT"""
-        if e.files and len(e.files) > 0:
-            self.arquivo_pbit.value = e.files[0].path
-            self.page.update()
+        try:
+            if e.files:
+                file_path = e.files[0].path
+                if file_path.lower().endswith('.pbix'):
+                    with self.page.show_loading("Convertendo PBIX para PBIT..."):
+                        pbit_path = convert_pbix_to_pbit(file_path)
+                        file_path = pbit_path
+                        self.page.show_snack_bar("Arquivo convertido com sucesso!")
+                self.arquivo_pbit.value = file_path
+                self.arquivo_pbit.update()
+        except Exception as ex:
+            self.page.show_snack_bar(
+                ft.SnackBar(
+                    content=ft.Text(f"Erro ao selecionar arquivo: {str(ex)}"),
+                    action="OK"
+                )
+            )
 
     def pick_word_template(self, e: ft.FilePickerResultEvent):
         """Manipula a seleção do modelo Word"""

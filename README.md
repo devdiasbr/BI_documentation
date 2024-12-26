@@ -46,6 +46,7 @@ python main.py
   - Medidas DAX
   - Fontes de dados
   - Relacionamentos
+- Conversão automática de PBIX para PBIT
 - Feedback visual em tempo real
 - Tratamento de erros robusto
 - Logging detalhado
@@ -77,9 +78,12 @@ BI_documentation/
 ## 📝 Como Usar
 
 1. **Preparação do Arquivo Power BI**
-   - Abra seu relatório no Power BI Desktop
-   - Vá em Arquivo > Exportar > Modelo do Power BI
-   - Salve o arquivo .pbit
+   - Você pode usar tanto arquivos .pbix quanto .pbit
+   - Se usar um .pbix, o programa converterá automaticamente para .pbit
+   - Ou você pode exportar manualmente:
+     - Abra seu relatório no Power BI Desktop
+     - Vá em Arquivo > Exportar > Modelo do Power BI
+     - Salve o arquivo .pbit
 
 2. **Gerando a Documentação**
    - Abra o programa (executável ou via Python)
