@@ -31,15 +31,12 @@ class MainWindow:
         """Inicializa os controles da interface"""
         self.arquivo_pbit = ft.Text()
         self.modelo_word = ft.Text()
-        self.diretorio_saida = ft.Text()
         self.pick_pbit_dialog = ft.FilePicker(on_result=self.pick_pbit_file)
         self.pick_word_dialog = ft.FilePicker(on_result=self.pick_word_template)
-        self.pick_directory_dialog = ft.FilePicker(on_result=self.pick_output_directory)
         
         self.page.overlay.extend([
             self.pick_pbit_dialog,
-            self.pick_word_dialog,
-            self.pick_directory_dialog
+            self.pick_word_dialog
         ])
 
     def toggle_theme(self, e):
@@ -91,8 +88,7 @@ class MainWindow:
                     ft.Text("1. Transforme seu arquivo .pbix em .pbit"),
                     ft.Text("2. Selecione o arquivo .pbit gerado"),
                     ft.Text("3. Selecione um modelo Word"),
-                    ft.Text("4. Escolha o diretório de saída"),
-                    ft.Text("5. Clique em 'Gerar Documentação'"),
+                    ft.Text("4. Clique em 'Gerar Documentação'"),
                 ]),
                 padding=10,
                 col={"sm": 12, "md": 6},
@@ -138,18 +134,6 @@ class MainWindow:
                 ]),
                 padding=10,
                 col={"sm": 12, "md": 6},
-            ),
-            ft.Container(
-                content=ft.Column([
-                    ft.FilledButton(
-                        "Selecionar diretório de saída",
-                        icon=ft.icons.FOLDER,
-                        on_click=lambda _: self.pick_directory_dialog.pick_files(),
-                    ),
-                    self.diretorio_saida,
-                ]),
-                padding=10,
-                col={"sm": 12},
             ),
         ])
 
@@ -197,19 +181,12 @@ class MainWindow:
             self.modelo_word.value = e.files[0].path
             self.page.update()
 
-    def pick_output_directory(self, e: ft.FilePickerResultEvent):
-        """Manipula a seleção do diretório de saída"""
-        if e.files and len(e.files) > 0:
-            file_path = Path(e.files[0].path)
-            self.diretorio_saida.value = str(file_path.parent)
-            self.page.update()
-
     def generate_documentation(self, e):
         """Gera a documentação usando os parâmetros selecionados"""
-        if not all([self.arquivo_pbit.value, self.modelo_word.value, self.diretorio_saida.value]):
+        if not all([self.arquivo_pbit.value, self.modelo_word.value]):
             self.page.show_snack_bar(
                 ft.SnackBar(
-                    content=ft.Text("Por favor, preencha todos os campos necessários"),
+                    content=ft.Text("Por favor, selecione o arquivo PBIT e o modelo Word"),
                     action="OK"
                 )
             )
@@ -218,12 +195,11 @@ class MainWindow:
         try:
             DocumentGenerator.generate(
                 self.arquivo_pbit.value,
-                self.modelo_word.value,
-                self.diretorio_saida.value
+                self.modelo_word.value
             )
             self.page.show_snack_bar(
                 ft.SnackBar(
-                    content=ft.Text("Documentação gerada com sucesso!"),
+                    content=ft.Text("Documentação gerada com sucesso! Verifique a pasta 'output'"),
                     action="OK"
                 )
             )
