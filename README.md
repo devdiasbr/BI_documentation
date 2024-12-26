@@ -2,14 +2,44 @@
 
 Uma ferramenta com interface gráfica moderna para gerar documentação automatizada de relatórios Power BI.
 
+<div align="center">
+
+![GitHub](https://img.shields.io/github/license/devdiasbr/BI_documentation)
+![Python Version](https://img.shields.io/badge/python-3.8%2B-blue)
+![Flet](https://img.shields.io/badge/flet-latest-green)
+
+</div>
+
 ## 📋 Descrição
 
 O Power BI Documentator é uma aplicação desktop que automatiza a criação de documentação técnica para relatórios Power BI. Com uma interface intuitiva e responsiva, o programa extrai informações detalhadas do seu relatório e gera um documento Word organizado e profissional.
 
+## 🚀 Início Rápido
+
+### Usando o Executável (Recomendado)
+
+1. Baixe o arquivo `main.exe` da pasta [dist](dist/)
+2. Execute o arquivo clicando duas vezes
+3. Selecione seu arquivo .pbit e gere a documentação
+
+### Instalação Manual (Para Desenvolvedores)
+
+```bash
+# Clone o repositório
+git clone https://github.com/devdiasbr/BI_documentation.git
+cd BI_documentation
+
+# Instale as dependências
+pip install -r requirements.txt
+
+# Execute o programa
+python main.py
+```
+
 ## ✨ Funcionalidades
 
 - Interface gráfica moderna e responsiva
-- Tema claro/escuro
+- Tema claro/escuro automático
 - Extração automática de:
   - Páginas do relatório
   - Tabelas e colunas
@@ -26,7 +56,8 @@ O Power BI Documentator é uma aplicação desktop que automatiza a criação de
 
 ```
 BI_documentation/
-├── output/               # Documentos gerados
+├── dist/                # Executável do programa
+├── output/              # Documentos gerados
 ├── Report/              # Arquivos do Power BI
 ├── src/                 # Código fonte
 │   ├── core/           # Lógica principal
@@ -43,84 +74,59 @@ BI_documentation/
 └── requirements.txt   # Dependências
 ```
 
-## 🚀 Como Usar
+## 📝 Como Usar
 
-1. **Pré-requisitos**
-   - Python 3.8 ou superior
-   - Power BI Desktop
-
-2. **Instalação**
-   ```bash
-   # Clone o repositório
-   git clone https://github.com/seu-usuario/BI_documentation.git
-   cd BI_documentation
-
-   # Instale as dependências
-   pip install -r requirements.txt
-   ```
-
-3. **Preparação do Arquivo**
+1. **Preparação do Arquivo Power BI**
    - Abra seu relatório no Power BI Desktop
    - Vá em Arquivo > Exportar > Modelo do Power BI
    - Salve o arquivo .pbit
 
-4. **Execução**
-   ```bash
-   python main.py
-   ```
-
-5. **Na Interface**
-   - Selecione o arquivo .pbit
-   - Escolha um modelo Word
+2. **Gerando a Documentação**
+   - Abra o programa (executável ou via Python)
+   - Clique em "Selecionar Arquivo" e escolha seu .pbit
+   - Escolha um modelo Word (opcional)
    - Clique em "Gerar Documentação"
-   - O documento será gerado automaticamente na pasta `output/`
+   - O documento será salvo automaticamente na pasta `output/`
 
-## 🛠️ Tecnologias
+## 🛠️ Tecnologias Utilizadas
 
-- **Python 3.8+**: Linguagem principal
-- **Flet**: Framework para interface gráfica
-- **python-docx**: Geração de documentos Word
-- **pathlib**: Manipulação de caminhos
+- **Python 3.8+**: Linguagem base
+- **Flet**: Framework moderno para UI
+- **python-docx**: Manipulação de documentos Word
+- **pathlib**: Gerenciamento de arquivos
 - **logging**: Sistema de logs
 
-## 📝 Personalização
+## 🔧 Configurações Avançadas
 
-O projeto suporta personalização através de:
-- Modelos Word customizados em `templates/`
-- Configurações em `src/utils/config.py`
-- Temas claro/escuro
+### Personalização
+- **Templates**: Adicione seus modelos Word em `templates/`
+- **Configurações**: Ajuste parâmetros em `src/utils/config.py`
+- **Temas**: Suporte automático a tema claro/escuro
+
+### Executável
+- O arquivo `main.exe` é independente e portátil
+- Não requer Python instalado
+- Pode ser movido para qualquer local
+- Atualizações requerem nova compilação via PyInstaller
 
 ## 🤝 Contribuindo
 
 1. Fork o projeto
-2. Crie sua Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a Branch (`git push origin feature/AmazingFeature`)
+2. Crie sua Feature Branch (`git checkout -b feature/NovaFuncionalidade`)
+3. Commit suas mudanças (`git commit -m 'Adiciona nova funcionalidade'`)
+4. Push para a Branch (`git push origin feature/NovaFuncionalidade`)
 5. Abra um Pull Request
 
 ## 📄 Licença
 
 Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
 
-## 🙏 Créditos
+## 👤 Autor
 
-Desenvolvido por [Bruno Dias](https://github.com/devdiasbr)
-
-## Executável
-
-Um arquivo executável (.exe) foi criado para facilitar o uso do programa. Você pode encontrá-lo em:
-`/dist/main.exe`
-
-Para usar o programa:
-1. Navegue até a pasta `dist`
-2. Clique duas vezes em `main.exe`
-3. O programa abrirá uma janela com a interface de documentação
-
-Observações:
-- O executável é independente e pode ser executado em qualquer computador Windows sem necessidade do Python instalado
-- Você pode mover o arquivo `main.exe` para qualquer lugar do seu computador
-- Se houver alterações no código Python, será necessário gerar o executável novamente usando PyInstaller
+**Bruno Dias**
+- GitHub: [@devdiasbr](https://github.com/devdiasbr)
+- LinkedIn: [Bruno Dias](https://www.linkedin.com/in/bruno-dias-b195611a7/)
 
 ---
 
-**Nota**: Para sugestões, bugs ou contribuições, por favor abra uma issue no GitHub.
+**Nota**: Para sugestões, bugs ou contribuições, por favor abra uma [issue](https://github.com/devdiasbr/BI_documentation/issues) no GitHub.
